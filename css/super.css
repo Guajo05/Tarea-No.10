@@ -1,0 +1,133 @@
+/* Estilos específicos para el panel de validador */
+.dashboard-header {
+    background-color: white;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: var(--shadow);
+}
+
+.dashboard-header h1 {
+    color: var(--primary);
+    font-size: 1.8rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 5px;
+}
+
+.dashboard-section {
+    background-color: white;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: var(--shadow);
+    margin-bottom: 1.5rem;
+}
+
+.dashboard-section h2 {
+    color: var(--primary);
+    font-size: 1.4rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 1.5rem;
+}
+
+.incidents-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.incident-card {
+    border: 1px solid #eee;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: var(--transition);
+}
+
+.incident-card:hover {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transform: translateY(-5px);
+}
+
+.incident-header {
+    background-color: var(--primary);
+    color: white;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.incident-header h3 {
+    font-size: 1.1rem;
+    margin: 0;
+}
+
+.incident-type {
+    padding: 3px 10px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.incident-type.accident {
+    background-color: #f39c12;
+}
+
+.incident-type.robbery {
+    background-color: #c0392b;
+}
+
+.incident-body {
+    padding: 15px;
+}
+
+.incident-body p {
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+}
+
+.incident-actions {
+    padding: 10px 15px;
+    background-color: #f9f9f9;
+    border-top: 1px solid #eee;
+    text-align: right;
+}
+
+.view-btn {
+    padding: 6px 12px;
+    font-size: 0.9rem;
+    background-color: var(--accent);
+}
+
+.charts-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 20px;
+}
+
+.chart-card {
+    border: 1px solid #eee;
+    border-radius: 8px;
+    padding: 15px;
+}
+
+.chart-card h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    color: var(--dark);
+}
+
+.chart-placeholder {
+    background-color: #f9f9f9;
+    border-radius: 4px;
+    padding: 20px;
+    text-align: center;
+}
+
+.chart-placeholder img {
+    max-width: 100%;
+    height: auto;
+}

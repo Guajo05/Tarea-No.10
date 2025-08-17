@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reportar Incidencia - Incidencias RD</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/report.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+</head>
+<body>
+    <!-- Barra de navegación -->
+    <nav class="navbar">
+        <div class="logo-container">
+            <img src="assets/logo.svg" alt="Logo Incidencias RD" class="logo">
+            <span>Incidencias RD</span>
+        </div>
+        
+        <ul class="nav-links">
+            <li><a href="index.html"><i class="fas fa-map"></i> Mapa</a></li>
+            <li><a href="list.html"><i class="fas fa-list"></i> Lista</a></li>
+            <li class="active"><a href="report.html"><i class="fas fa-plus-circle"></i> Reportar</a></li>
+            <li><a href="#"><i class="fas fa-user"></i> Mi Cuenta</a></li>
+            <li><a href="super/login.html" class="validator-btn"><i class="fas fa-shield-alt"></i> Validador</a></li>
+        </ul>
+        
+        <div class="mobile-menu">
+            <i class="fas fa-bars"></i>
+        </div>
+    </nav>
+
+    <!-- Contenido principal -->
+    <main class="container">
+        <div class="report-header">
+            <h1><i class="fas fa-plus-circle"></i> Reportar Nueva Incidencia</h1>
+            <p>Completa todos los campos requeridos para reportar una incidencia.</p>
+        </div>
+        
+        <form id="incident-form" class="report-form">
+            <!-- Sección 1: Información básica -->
+            <fieldset>
+                <legend><i class="fas fa-info-circle"></i> Información Básica</legend>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="incident-date">Fecha y Hora de Ocurrencia *</label>
+                        <input type="datetime-local" id="incident-date" name="incident-date" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="incident-title">Título *</label>
+                        <input type="text" id="incident-title" name="incident-title" placeholder="Ej: Accidente de tránsito en Av. Churchill" required>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="incident-type">Tipo de Incidencia *</label>
+                    <div class="checkbox-group">
+                        <div>
+                            <input type="checkbox" id="type-accident" name="incident-type" value="accidente">
+                            <label for="type-accident"><i class="fas fa-car-crash"></i> Accidente</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="type-fight" name="incident-type" value="pelea">
+                            <label for="type-fight"><i class="fas fa-fist-raised"></i> Pelea</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="type-robbery" name="incident-type" value="robo">
+                            <label for="type-robbery"><i class="fas fa-mask"></i> Robo</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="type-disaster" name="incident-type" value="desastre">
+                            <label for="type-disaster"><i class="fas fa-house-flood-water"></i> Desastre</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="type-fire" name="incident-type" value="incendio">
+                            <label for="type-fire"><i class="fas fa-fire"></i> Incendio</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="type-shooting" name="incident-type" value="tiroteo">
+                            <label for="type-shooting"><i class="fas fa-gun"></i> Tiroteo</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="type-vandalism" name="incident-type" value="vandalismo">
+                            <label for="type-vandalism"><i class="fas fa-spray-can"></i> Vandalismo</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="type-missing" name="incident-type" value="desaparecido">
+                            <label for="type-missing"><i class="fas fa-user-slash"></i> Persona Desaparecida</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="type-protest" name="incident-type" value="protesta">
+                            <label for="type-protest"><i class="fas fa-bullhorn"></i> Protesta</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="type-other" name="incident-type" value="otro">
+                            <label for="type-other"><i class="fas fa-ellipsis-h"></i> Otro</label>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="incident-description">Descripción *</label>
+                    <textarea id="incident-description" name="incident-description" rows="4" required></textarea>
+                </div>
+            </fieldset>
+            
+            <!-- Sección 2: Ubicación -->
+            <fieldset>
+                <legend><i class="fas fa-map-marker-alt"></i> Ubicación</legend>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="province">Provincia *</label>
+                        <select id="province" name="province" required>
+                            <option value="">Seleccione una provincia</option>
+                            <option value="santo-domingo">Santo Domingo</option>
+                            <option value="santiago">Santiago</option>
+                            <option value="azua">Azua</option>
+                            <option value="baoruco">Baoruco</option>
+                            <option value="barahona">Barahona</option>
+                            <option value="dajabon">Dajabón</option>
+                            <option value="distrito-nacional">Distrito Nacional</option>
+                            <option value="duarte">Duarte</option>
+                            <option value="elias-piña">Elías Piña</option>
+                            <option value="el-seibo">El Seibo</option>
+                            <option value="espaillat">Espaillat</option>
+                            <option value="hato-mayor">Hato Mayor</option>
+                            <option value="hermanas-mirabal">Hermanas Mirabal</option>
+                            <option value="independencia">Independencia</option>
+                            <option value="la-altagracia">La Altagracia</option>
+                            <option value="la-romana">La Romana</option>
+                            <option value="la-vega">La Vega</option>
+                            <option value="maria-trinidad-sanchez">María Trinidad Sánchez</option>
+                            <option value="monte-cristi">Monte Cristi</option>
+                            <option value="monte-plata">Monte Plata</option>
+                            <option value="pedernales">Pedernales</option>
+                            <option value="peravia">Peravia</option>
+                            <option value="puerto-plata">Puerto Plata</option>
+                            <option value="samana">Samaná</option>
+                            <option value="san-cristobal">San Cristóbal</option>
+                            <option value="san-juan">San Juan</option>
+                            <option value="san-pedro-de-macoris">San Pedro de Macorís</option>
+                            <option value="sanchez-ramirez">Sánchez Ramírez</option>
+                            <option value="santiago-rodriguez">Santiago Rodríguez</option>
+                            <option value="valverde">Valverde</option>
+                            <option value="monsenor-nouel">Monseñor Nouel</option>
+                            <option value="san-jose-de-ocoa">San José de Ocoa</option>
+                            <option value="santo-domingo-este">Santo Domingo Este</option>
+                            <option value="santo-domingo-oeste">Santo Domingo Oeste</option>
+                            <option value="santo-domingo-norte">Santo Domingo Norte</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="municipality">Municipio *</label>
+                        <select id="municipality" name="municipality" required disabled>
+                            <option value="">Primero seleccione una provincia</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="neighborhood">Barrio/Sección</label>
+                    <input type="text" id="neighborhood" name="neighborhood">
+                </div>
+                
+                <div class="form-group">
+                    <label for="location">Coordenadas (Latitud, Longitud) *</label>
+                    <div class="coordinates-input">
+                        <input type="text" id="latitude" name="latitude" placeholder="Latitud" required>
+                        <input type="text" id="longitude" name="longitude" placeholder="Longitud" required>
+                        <button type="button" class="btn map-btn"><i class="fas fa-map-marked-alt"></i> Seleccionar en Mapa</button>
+                    </div>
+                    <p class="help-text">Puede usar el botón para seleccionar la ubicación en el mapa</p>
+                </div>
+            </fieldset>
+            
+            <!-- Sección 3: Impacto -->
+            <fieldset>
+                <legend><i class="fas fa-exclamation-triangle"></i> Impacto</legend>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="deaths">Muertos</label>
+                        <input type="number" id="deaths" name="deaths" min="0" value="0">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="injured">Heridos</label>
+                        <input type="number" id="injured" name="injured" min="0" value="0">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="losses">Pérdida Estimada (RD$)</label>
+                        <input type="number" id="losses" name="losses" min="0" placeholder="Ej: 50000">
+                    </div>
+                </div>
+            </fieldset>
+            
+            <!-- Sección 4: Multimedia y Enlaces -->
+            <fieldset>
+                <legend><i class="fas fa-camera"></i> Multimedia y Enlaces</legend>
+                
+                <div class="form-group">
+                    <label for="social-link">Enlace a Redes Sociales</label>
+                    <input type="url" id="social-link" name="social-link" placeholder="Ej: https://twitter.com/...">
+                </div>
+                
+                <div class="form-group">
+                    <label for="incident-photo">Foto del Hecho</label>
+                    <div class="file-upload">
+                        <input type="file" id="incident-photo" name="incident-photo" accept="image/*">
+                        <label for="incident-photo" class="file-label">
+                            <i class="fas fa-cloud-upload-alt"></i> 
+                            <span class="file-text">Seleccionar archivo</span>
+                        </label>
+                    </div>
+                    <div id="photo-preview"></div>
+                </div>
+            </fieldset>
+            
+            <div class="form-actions">
+                <button type="reset" class="btn cancel-btn">Cancelar</button>
+                <button type="submit" class="btn submit-btn"><i class="fas fa-paper-plane"></i> Enviar Reporte</button>
+            </div>
+        </form>
+    </main>
+
+    <!-- Pie de página -->
+    <footer>
+        <p>&copy; 2025 Incidencias RD - Todos los derechos reservados</p>
+        <div class="footer-links">
+            <a href="#">Términos de uso</a>
+            <a href="#">Privacidad</a>
+            <a href="#">Contacto</a>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/report.js"></script>
+</body>
+</html>

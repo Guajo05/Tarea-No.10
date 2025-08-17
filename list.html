@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Incidencias - Incidencias RD</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/list.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+</head>
+<body>
+    <!-- Barra de navegación -->
+    <nav class="navbar">
+        <div class="logo-container">
+            <img src="assets/logo.svg" alt="Logo Incidencias RD" class="logo">
+            <span>Incidencias RD</span>
+        </div>
+        
+        <ul class="nav-links">
+            <li><a href="index.html"><i class="fas fa-map"></i> Mapa</a></li>
+            <li class="active"><a href="list.html"><i class="fas fa-list"></i> Lista</a></li>
+            <li><a href="report.html"><i class="fas fa-plus-circle"></i> Reportar</a></li>
+            <li><a href="#"><i class="fas fa-user"></i> Mi Cuenta</a></li>
+            <li><a href="super/login.html" class="validator-btn"><i class="fas fa-shield-alt"></i> Validador</a></li>
+        </ul>
+        
+        <div class="mobile-menu">
+            <i class="fas fa-bars"></i>
+        </div>
+    </nav>
+
+    <!-- Contenido principal -->
+    <main class="container">
+        <div class="list-header">
+            <h1><i class="fas fa-list"></i> Lista de Incidencias</h1>
+            <p>Explora y filtra las incidencias reportadas en el país</p>
+        </div>
+        
+        <!-- Filtros -->
+        <div class="filters-container">
+            <div class="filter-group">
+                <label for="province-filter"><i class="fas fa-map-marker-alt"></i> Provincia:</label>
+                <select id="province-filter">
+                    <option value="all">Todas</option>
+                    <option value="santo-domingo">Santo Domingo</option>
+                    <option value="santiago">Santiago</option>
+                    <option value="azua">Azua</option>
+                    <option value="baoruco">Baoruco</option>
+                    <option value="barahona">Barahona</option>
+                    <option value="dajabon">Dajabón</option>
+                    <option value="distrito-nacional">Distrito Nacional</option>
+                    <option value="duarte">Duarte</option>
+                    <option value="elias-piña">Elías Piña</option>
+                    <option value="el-seibo">El Seibo</option>
+                    <option value="espaillat">Espaillat</option>
+                    <option value="hato-mayor">Hato Mayor</option>
+                    <option value="hermanas-mirabal">Hermanas Mirabal</option>
+                    <option value="independencia">Independencia</option>
+                    <option value="la-altagracia">La Altagracia</option>
+                    <option value="la-romana">La Romana</option>
+                    <option value="la-vega">La Vega</option>
+                    <option value="maria-trinidad-sanchez">María Trinidad Sánchez</option>
+                    <option value="monseñor-nouel">Monseñor Nouel</option>
+                    <option value="monte-cristi">Monte Cristi</option>
+                    <option value="monte-plata">Monte Plata</option>
+                    <option value="pedernales">Pedernales</option>
+                    <option value="peravia">Peravia</option>
+                    <option value="puerto-plata">Puerto Plata</option>
+                    <option value="samana">Samaná</option>
+                    <option value="san-cristobal">San Cristóbal</option>
+                    <option value="san-juan">San Juan</option>
+                    <option value="san-pedro-de-macoris">San Pedro de Macorís</option>
+                    <option value="sanchez-ramirez">Sánchez Ramírez</option>
+                    <option value="santiago-rodriguez">Santiago Rodríguez</option>
+                    <option value="san-jose-de-ocoa">San José de Ocoa</option>
+                </select>
+            </div>
+            
+            <div class="filter-group">
+                <label for="type-filter"><i class="fas fa-tag"></i> Tipo:</label>
+                <select id="type-filter">
+                    <option value="all">Todos</option>
+                    <option value="accidente">Accidente</option>
+                    <option value="robo">Robo</option>
+                    <option value="incendio">Incendio</option>
+                    <option value="inundacion">Inundación</option>
+                    <option value="deslizamiento">Deslizamiento de tierra</option>
+                    <option value="apagón">Apagón</option>
+                    <option value="protesta">Protesta</option>
+                    <option value="violencia">Violencia</option>
+                    <option value="emergencia-medica">Emergencia médica</option>
+                    <option value="animal-peligroso">Animal peligroso</option>
+                    <option value="vandalismo">Vandalismo</option>
+                    <option value="otro">Otro</option>
+                </select>
+            </div>
+            
+            <div class="filter-group">
+                <label for="date-from"><i class="fas fa-calendar"></i> Desde:</label>
+                <input type="date" id="date-from">
+            </div>
+            
+            <div class="filter-group">
+                <label for="date-to">Hasta:</label>
+                <input type="date" id="date-to">
+            </div>
+            
+            <div class="filter-group search-group">
+                <label for="search"><i class="fas fa-search"></i> Buscar:</label>
+                <input type="text" id="search" placeholder="Título o descripción">
+                <button class="btn search-btn">Buscar</button>
+            </div>
+        </div>
+        
+        <!-- Tabla de incidencias -->
+        <div class="table-container">
+            <table class="incidents-table">
+                <thead>
+                    <tr>
+                        <th>Título</th>
+                        <th>Tipo</th>
+                        <th>Ubicación</th>
+                        <th>Fecha</th>
+                        <th>Estado</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Ejemplo de fila -->
+                    <tr>
+                        <td>Accidente en la John F. Kennedy</td>
+                        <td><span class="incident-type accident"><i class="fas fa-car-crash"></i> Accidente</span></td>
+                        <td>Santo Domingo Este</td>
+                        <td>17/08/2023 14:30</td>
+                        <td><span class="status validated">Validado</span></td>
+                        <td>
+                            <button class="btn view-btn"><i class="fas fa-eye"></i> Ver</button>
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Robo a mano armada en El Conde</td>
+                        <td><span class="incident-type robbery"><i class="fas fa-mask"></i> Robo</span></td>
+                        <td>Distrito Nacional</td>
+                        <td>17/08/2023 10:15</td>
+                        <td><span class="status pending">Pendiente</span></td>
+                        <td>
+                            <button class="btn view-btn"><i class="fas fa-eye"></i> Ver</button>
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Inundación en Villa Mella</td>
+                        <td><span class="incident-type disaster"><i class="fas fa-house-flood-water"></i> Desastre</span></td>
+                        <td>Santo Domingo Norte</td>
+                        <td>16/08/2023 18:45</td>
+                        <td><span class="status validated">Validado</span></td>
+                        <td>
+                            <button class="btn view-btn"><i class="fas fa-eye"></i> Ver</button>
+                        </td>
+                    </tr>
+                    
+                    <!-- Más filas de ejemplo -->
+                </tbody>
+            </table>
+        </div>
+        
+        <!-- Paginación -->
+        <div class="pagination">
+            <button class="btn pagination-btn"><i class="fas fa-chevron-left"></i></button>
+            <button class="btn pagination-btn active">1</button>
+            <button class="btn pagination-btn">2</button>
+            <button class="btn pagination-btn">3</button>
+            <button class="btn pagination-btn"><i class="fas fa-chevron-right"></i></button>
+        </div>
+    </main>
+
+    <!-- Pie de página -->
+    <footer>
+        <p>&copy; 2023 Incidencias RD - Todos los derechos reservados</p>
+        <div class="footer-links">
+            <a href="#">Términos de uso</a>
+            <a href="#">Privacidad</a>
+            <a href="#">Contacto</a>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/filters.js"></script>
+</body>
+</html>

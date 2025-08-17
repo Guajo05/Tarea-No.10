@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel Validador - Incidencias RD</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/super.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" href="../assets/logo.svg" type="image/svg+xml">
+</head>
+<body>
+    <!-- Barra de navegación validador -->
+    <nav class="navbar">
+        <div class="logo-container">
+            <img src="../assets/logo.svg" alt="Logo Incidencias RD" class="logo">
+            <span>Incidencias RD - Validador</span>
+        </div>
+        
+        <ul class="nav-links">
+            <li class="active"><a href="dashboard.html"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+            <li><a href="#"><i class="fas fa-check-circle"></i> Validar Reportes</a></li>
+            <li><a href="#"><i class="fas fa-chart-bar"></i> Estadísticas</a></li>
+            <li><a href="../admin/catalogs.html"><i class="fas fa-book"></i> Catálogos</a></li>
+            <li><a href="#"><i class="fas fa-user"></i> Perfil</a></li>
+            <li><a href="../index.html"><i class="fas fa-sign-out-alt"></i> Salir</a></li>
+        </ul>
+        
+        <div class="mobile-menu">
+            <i class="fas fa-bars"></i>
+        </div>
+    </nav>
+
+    <!-- Contenido principal -->
+    <main class="container">
+        <div class="dashboard-header">
+            <h1><i class="fas fa-tachometer-alt"></i> Panel de Validador</h1>
+            <p>Gestiona y valida los reportes de incidencias</p>
+        </div>
+        
+        <!-- Estadísticas rápidas -->
+        <div class="stats-container">
+            <div class="stat-card">
+                <h3>Reportes Pendientes</h3>
+                <p class="stat-value">8</p>
+            </div>
+            <div class="stat-card">
+                <h3>Reportes Validados Hoy</h3>
+                <p class="stat-value">12</p>
+            </div>
+            <div class="stat-card">
+                <h3>Correcciones Pendientes</h3>
+                <p class="stat-value">5</p>
+            </div>
+        </div>
+        
+        <!-- Sección de reportes pendientes -->
+        <div class="dashboard-section">
+            <h2><i class="fas fa-check-circle"></i> Reportes Pendientes de Validación</h2>
+            
+            <div class="incidents-grid">
+                <div class="incident-card">
+                    <div class="incident-header">
+                        <h3>Accidente en la John F. Kennedy</h3>
+                        <span class="incident-type accident">Accidente</span>
+                    </div>
+                    <div class="incident-body">
+                        <p><i class="fas fa-map-marker-alt"></i> Santo Domingo Este, Av. John F. Kennedy</p>
+                        <p><i class="fas fa-calendar"></i> 17/08/2023 14:30</p>
+                        <p><strong>Descripción:</strong> Choque múltiple entre 3 vehículos...</p>
+                    </div>
+                    <div class="incident-actions">
+                        <button class="btn view-btn"><i class="fas fa-eye"></i> Revisar</button>
+                    </div>
+                </div>
+                
+                <div class="incident-card">
+                    <div class="incident-header">
+                        <h3>Robo en El Conde</h3>
+                        <span class="incident-type robbery">Robo</span>
+                    </div>
+                    <div class="incident-body">
+                        <p><i class="fas fa-map-marker-alt"></i> Distrito Nacional, Calle El Conde</p>
+                        <p><i class="fas fa-calendar"></i> 17/08/2023 10:15</p>
+                        <p><strong>Descripción:</strong> Robo a mano armada a turista...</p>
+                    </div>
+                    <div class="incident-actions">
+                        <button class="btn view-btn"><i class="fas fa-eye"></i> Revisar</button>
+                    </div>
+                </div>
+                
+                <!-- Más tarjetas de ejemplo -->
+            </div>
+        </div>
+        
+        <!-- Gráficos estadísticos -->
+        <div class="dashboard-section">
+            <h2><i class="fas fa-chart-bar"></i> Estadísticas</h2>
+            
+            <div class="charts-container">
+                <div class="chart-card">
+                    <h3>Incidencias por Tipo</h3>
+                    <div class="chart-placeholder">
+                        <img src="https://via.placeholder.com/400x300?text=Gráfico+de+Barras" alt="Gráfico de barras">
+                    </div>
+                </div>
+                
+                <div class="chart-card">
+                    <h3>Incidencias por Provincia</h3>
+                    <div class="chart-placeholder">
+                        <img src="https://via.placeholder.com/400x300?text=Gráfico+de+Tarta" alt="Gráfico de tarta">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Pie de página -->
+    <footer>
+        <p>&copy; 2025 Incidencias RD - Todos los derechos reservados</p>
+        <div class="footer-links">
+            <a href="#">Términos de uso</a>
+            <a href="#">Privacidad</a>
+            <a href="#">Contacto</a>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/super.js"></script>
+</body>
+</html>

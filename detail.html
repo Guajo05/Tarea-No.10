@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalle de Incidencia - Incidencias RD</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/detail.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+</head>
+<body>
+    <!-- Barra de navegación -->
+    <nav class="navbar">
+        <div class="logo-container">
+            <img src="assets/logo.svg" alt="Logo Incidencias RD" class="logo">
+            <span>Incidencias RD</span>
+        </div>
+        
+        <ul class="nav-links">
+            <li><a href="index.html"><i class="fas fa-map"></i> Mapa</a></li>
+            <li><a href="list.html"><i class="fas fa-list"></i> Lista</a></li>
+            <li><a href="report.html"><i class="fas fa-plus-circle"></i> Reportar</a></li>
+            <li><a href="#"><i class="fas fa-user"></i> Mi Cuenta</a></li>
+            <li><a href="super/login.html" class="validator-btn"><i class="fas fa-shield-alt"></i> Validador</a></li>
+        </ul>
+        
+        <div class="mobile-menu">
+            <i class="fas fa-bars"></i>
+        </div>
+    </nav>
+
+    <!-- Contenido principal -->
+    <main class="container">
+        <div class="detail-header">
+            <h1><i class="fas fa-car-crash"></i> Accidente en la John F. Kennedy</h1>
+            <div class="incident-meta">
+                <span class="incident-type accident"><i class="fas fa-car-crash"></i> Accidente</span>
+                <span><i class="fas fa-map-marker-alt"></i> Santo Domingo Este, Av. John F. Kennedy</span>
+                <span><i class="fas fa-calendar"></i> 17/08/2023 14:30</span>
+                <span class="status validated"><i class="fas fa-check-circle"></i> Validado</span>
+            </div>
+        </div>
+        
+        <div class="detail-container">
+            <!-- Columna izquierda: Mapa y detalles -->
+            <div class="detail-content">
+                <div class="map-container">
+                    <div class="map-placeholder">
+                        <div class="map-overlay">
+                            <div class="incident-marker active" style="top: 50%; left: 50%;">
+                                <i class="fas fa-car-crash"></i>
+                                <div class="incident-info">
+                                    <h3>Accidente de tránsito</h3>
+                                    <p>Av. John F. Kennedy</p>
+                                    <p>Hace 2 horas</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="incident-details">
+                    <h2><i class="fas fa-info-circle"></i> Detalles</h2>
+                    <div class="details-grid">
+                        <div>
+                            <strong>Descripción:</strong>
+                            <p>Choque múltiple entre 3 vehículos en la intersección con la calle Sarasota. Se reportan heridos.</p>
+                        </div>
+                        <div>
+                            <strong>Muertos:</strong>
+                            <p>0</p>
+                        </div>
+                        <div>
+                            <strong>Heridos:</strong>
+                            <p>3</p>
+                        </div>
+                        <div>
+                            <strong>Pérdidas estimadas:</strong>
+                            <p>RD$ 350,000</p>
+                        </div>
+                        <div>
+                            <strong>Reportado por:</strong>
+                            <p>Juan Pérez (juan.perez@example.com)</p>
+                        </div>
+                        <div>
+                            <strong>Enlace a redes:</strong>
+                            <p><a href="#" target="_blank">https://twitter.com/...</a></p>
+                        </div>
+                    </div>
+                    
+                    <div class="incident-photos">
+                        <h2><i class="fas fa-camera"></i> Fotos</h2>
+                        <div class="photos-container">
+                            <img src="https://via.placeholder.com/300x200?text=Foto+1" alt="Foto del incidente">
+                            <img src="https://via.placeholder.com/300x200?text=Foto+2" alt="Foto del incidente">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Columna derecha: Comentarios y correcciones -->
+            <div class="detail-sidebar">
+                <div class="comments-section">
+                    <h2><i class="fas fa-comments"></i> Comentarios (2)</h2>
+                    
+                    <div class="comment-form">
+                        <textarea placeholder="Escribe tu comentario..." rows="3"></textarea>
+                        <button class="btn comment-btn">Publicar Comentario</button>
+                    </div>
+                    
+                    <div class="comments-list">
+                        <div class="comment">
+                            <div class="comment-header">
+                                <strong>María Rodríguez</strong>
+                                <span>Hace 1 hora</span>
+                            </div>
+                            <div class="comment-body">
+                                <p>Pasé por ahí hace media hora y ya habían retirado los vehículos. El tráfico estaba lento.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="comment">
+                            <div class="comment-header">
+                                <strong>Carlos Martínez</strong>
+                                <span>Hace 45 minutos</span>
+                            </div>
+                            <div class="comment-body">
+                                <p>Confirmo, hubo tres heridos, todos fueron trasladados al hospital.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="corrections-section">
+                    <h2><i class="fas fa-edit"></i> Sugerir Corrección</h2>
+                    <p>Si encuentras algún error en la información, puedes sugerir una corrección:</p>
+                    
+                    <form class="correction-form">
+                        <div class="form-group">
+                            <label for="correction-field">Campo a corregir:</label>
+                            <select id="correction-field">
+                                <option value="muertos">Muertos</option>
+                                <option value="heridos">Heridos</option>
+                                <option value="provincia">Provincia</option>
+                                <option value="municipio">Municipio</option>
+                                <option value="perdida">Pérdida estimada</option>
+                                <option value="coordenadas">Coordenadas</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="correction-value">Valor correcto:</label>
+                            <input type="text" id="correction-value" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="correction-notes">Notas adicionales:</label>
+                            <textarea id="correction-notes" rows="3"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn correction-btn">Enviar Sugerencia</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Pie de página -->
+    <footer>
+        <p>&copy; 2025 Incidencias RD - Todos los derechos reservados</p>
+        <div class="footer-links">
+            <a href="#">Términos de uso</a>
+            <a href="#">Privacidad</a>
+            <a href="#">Contacto</a>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/detail.js"></script>
+</body>
+</html>

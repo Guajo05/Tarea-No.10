@@ -1,0 +1,129 @@
+/* Media queries para diseño responsive */
+
+/* Tablet: 768px - 1024px */
+@media (max-width: 1024px) {
+    .map-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .filters {
+        width: 100%;
+        margin-top: 15px;
+    }
+    
+    .stats-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Móvil: hasta 768px */
+@media (max-width: 768px) {
+    /* Barra de navegación */
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        background-color: var(--primary);
+        padding: 1rem;
+        box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    .nav-links li {
+        margin: 10px 0;
+    }
+    
+    .mobile-menu {
+        display: block;
+    }
+    
+    /* Mapa */
+    .map-placeholder {
+        height: 400px;
+    }
+    
+    .incident-info {
+        width: 200px;
+    }
+    
+    /* Estadísticas */
+    .stats-container {
+        grid-template-columns: 1fr;
+    }
+    
+    /* Formulario de reporte */
+    .form-row {
+        flex-direction: column;
+    }
+    
+    .coordinates-input {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    /* Lista de incidencias */
+    .filters-container {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .search-group {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    /* Detalle de incidencia */
+    .detail-container {
+        flex-direction: column;
+    }
+    
+    /* Panel de validador */
+    .incidents-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .charts-container {
+        grid-template-columns: 1fr;
+    }
+    
+    /* Administración */
+    .catalog-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+}
+
+/* Pequeños móviles: hasta 480px */
+@media (max-width: 480px) {
+    .logo-container span {
+        display: none;
+    }
+    
+    .map-header h1 {
+        font-size: 1.5rem;
+    }
+    
+    .map-placeholder {
+        height: 300px;
+    }
+    
+    .incident-info {
+        width: 150px;
+        font-size: 0.8rem;
+    }
+    
+    .incident-info h3 {
+        font-size: 0.9rem;
+    }
+    
+    .table-container {
+        overflow-x: auto;
+    }
+    
+    .incidents-table {
+        font-size: 0.9rem;
+    }
+}

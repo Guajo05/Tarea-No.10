@@ -1,0 +1,156 @@
+/* Estilos específicos para la vista de lista */
+.list-header {
+    background-color: white;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: var(--shadow);
+}
+
+.list-header h1 {
+    color: var(--primary);
+    font-size: 1.8rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.filters-container {
+    background-color: white;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: var(--shadow);
+    margin-bottom: 1.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    align-items: center;
+}
+
+.filter-group {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 200px;
+}
+
+.filter-group label {
+    font-weight: 500;
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.search-group {
+    flex-direction: row;
+    align-items: flex-end;
+    gap: 10px;
+}
+
+.search-group input {
+    flex: 1;
+}
+
+.search-btn {
+    padding: 10px 15px;
+}
+
+.table-container {
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    margin-bottom: 2rem;
+    overflow-x: auto;
+}
+
+.incidents-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.incidents-table th {
+    background-color: var(--primary);
+    color: white;
+    text-align: left;
+    padding: 12px 15px;
+}
+
+.incidents-table td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #eee;
+}
+
+.incidents-table tbody tr:hover {
+    background-color: #f9f9f9;
+}
+
+.incident-type {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.incident-type.accident {
+    background-color: rgba(243, 156, 18, 0.2);
+    color: #d35400;
+}
+
+.incident-type.robbery {
+    background-color: rgba(192, 57, 43, 0.2);
+    color: #c0392b;
+}
+
+.incident-type.disaster {
+    background-color: rgba(41, 128, 185, 0.2);
+    color: #2980b9;
+}
+
+.status {
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.status.pending {
+    background-color: rgba(241, 196, 15, 0.2);
+    color: #f39c12;
+}
+
+.status.validated {
+    background-color: rgba(46, 204, 113, 0.2);
+    color: #27ae60;
+}
+
+.status.rejected {
+    background-color: rgba(231, 76, 60, 0.2);
+    color: #c0392b;
+}
+
+.view-btn {
+    padding: 6px 12px;
+    font-size: 0.9rem;
+    background-color: var(--accent);
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+}
+
+.pagination-btn {
+    padding: 8px 15px;
+    background-color: var(--light);
+    color: var(--dark);
+}
+
+.pagination-btn.active {
+    background-color: var(--accent);
+    color: white;
+}
